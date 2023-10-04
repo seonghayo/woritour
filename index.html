@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우리투어</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <script src="lib/jquery-3.7.0.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+         $(function () {
+            $('.cont04 .inner > ul li').click(function () {
+                $('.cont04 .inner > ul li').removeClass('on')
+                $('.cont04 .inner > ul li').eq($(this).index()).addClass('on')
+                $('.cont04 .list').removeClass('on')
+                $('.cont04 .list').eq($(this).index()).addClass('on')
+            })
+            $('.cont05 .list .vol_list a').mouseenter(function () {
+                $('.cont05 .cont05_bg div').hide()
+                $('.cont05 .cont05_bg div').eq($(this).index()).show()
+            })
+            $('.cont05 .list .vol_list a').mouseleave(function () {
+                $('.cont05 .cont05_bg div').hide()
+            })
+        })//jquery end
+        window.onload = function () {
+            const progressCircle = document.querySelector(".autoplay-progress svg");
+            const progressContent = document.querySelector(".autoplay-progress span");
+            var swiper = new Swiper(".mySwiper", {
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    direction: "vertical"
+                },
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                on: {
+                    autoplayTimeLeft(s, time, progress) {
+                        progressCircle.style.setProperty("--progress", 1 - progress);
+                        progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+                    }
+                }
+            });
+
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <h1>
+                <a href="#">WooriTour</a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="#">여행패키지</a></li>
+                    <li><a href="#">국내여행</a></li>
+                    <li><a href="#">에어텔</a></li>
+                    <li><a href="#">허니문</a></li>
+                    <li><a href="#">골프</a></li>
+                    <li><a href="#">프리미엄</a></li>
+                </ul>
+            </nav>
+            <ul>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </div><!-- .inner end -->
+    </header>
+    <section class="main_visual">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/피그마_여행페이지/main_visual.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/피그마_여행페이지/main_visual2.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/피그마_여행페이지/main_visual3.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/피그마_여행페이지/main_visual4.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/피그마_여행페이지/main_visual5.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/피그마_여행페이지/main_visual6.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="autoplay-progress">
+                <svg viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20"></circle>
+                </svg>
+                <span></span>
+            </div>
+        </div>
+        <div class="title">
+            <h2>우리투어 유럽여행</h2>
+            <p>우리가<br><span class="red">사랑</span>한<br><span class="blue">유</span>&nbsp;&nbsp;&nbsp;<span
+                    class="yellow">럽</span></p>
+        </div><!-- .title end -->
+    </section><!-- .main_visual end -->
+    <section class="cont2">
+        <div class="box2">
+            <div class="title2">
+                <h5>2023 MEGA</h5>
+                <p>🎊메가세일 지역별 추천상품🎉</p>
+            </div><!-- .title end -->
+            <div class="list2">
+                <div class="item item1">
+                    <div>
+                        <h6>미주.캐나다.중남미</h6>
+                        <p>화려한 도시부터<br>끝없는 대자연까지</p>
+                        <span class="bt">상품 더보기
+                        </span><!-- .bt end 1 -->
+                    </div>
+                </div><!-- .item end 1 -->
+                <div class="item item2">
+                    <div>
+                        <h6>자유여행</h6>
+                        <p>취향저격<br>힐링/휴양/쇼핑</p>
+                        <span class="bt">
+                            상품 더보기
+                        </span><!-- .bt end 2 -->
+                    </div>
+                </div><!-- .item end 2 -->
+                <div class="item item3">
+                    <div>
+                        <h6>국내</h6>
+                        <p>우리것이 좋은것!<br>강원도에서 제주까지</p>
+                        <span class="bt">
+                            상품 더보기
+                        </span><!-- .bt end 3 -->
+                    </div>
+                </div><!-- .item end 3 -->
+                <div class="item item4">
+                    <div>
+                        <h6>골프</h6>
+                        <p>청정지역에서 즐기는 골프<br>휴양에서 힐링까지</p>
+                        <span class="bt">
+                            상품 더보기
+                        </span><!-- .bt end 4 -->
+                    </div>
+                </div><!-- .item end 4 -->
+                <div class="item item5">
+                    <div>
+                        <h6>허니문</h6>
+                        <p>더욱 특별한<br>상품을 찾고있다면?!</p>
+                        <span class="bt">
+                            상품 더보기
+                        </span><!-- .bt end 5 -->
+                    </div>
+                </div><!-- .item end 5-->
+            </div><!-- .item end 1 -->
+        </div><!-- .list end -->
+        </div>
+    </section><!-- .cont2 end -->
+    <section class="cont01">
+        <div class="box">
+            <div class="title">
+                <div>
+                    <h3>유럽여행 <span>BEST 3</span></h3>
+                    <p>최근 5년간 가장 인기 있는 장소!</p>
+                </div>
+            </div><!-- .title end -->
+            <div class="list">
+                <div class="item">
+                    <img src="img/피그마_여행페이지/best1.png" alt="">
+                    <div>
+                        <h4>BEST 1</h4>
+                        <span>영국 런던</span>
+                        <p>타워 브릿지, 빅밴, 버킹검 궁전 등 <br>여유가 있는 도시 런던 속으로</p>
+                    </div>
+                </div><!-- .item end 1 -->
+                <div class="item">
+                    <img src="img/피그마_여행페이지/best3.png" alt="">
+                    <div>
+                        <h4>BEST 2</h4>
+                        <span>스페인 바르셀로나</span>
+                        <p>가우디의 도시이자 예술과 건축이 <br>유명한 스페인 여행의 중심!</p>
+                    </div>
+                </div><!-- .item end 2 -->
+                <div class="item">
+                    <img src="img/피그마_여행페이지/best2.png" alt="">
+                    <div>
+                        <h4>BEST 3</h4>
+                        <span>프랑스 파리</span>
+                        <p>에펠탑, 세느 강 등 <br>로맨스와 설레임이 가득한 프랑스!</p>
+                    </div>
+                </div><!-- .item end 3 -->
+            </div><!-- .list end -->
+        </div><!-- .box end -->
+    </section><!-- .cont01 end -->
+    <section class="cont04">
+        <div class="inner">
+            <h2>테마가 있는 여행🛫</h2>
+            <ul>
+                <li class="on"><a href="#" onclick="return false">#황금연휴</a></li>
+                <li><a href="#" onclick="return false">#한나라일주</a></li>
+                <li><a href="#" onclick="return false">#허니문</a></li>
+                <li><a href="#" onclick="return false">#골프</a></li>
+            </ul>
+            <div class="list on">
+                <div class="item">
+                    <img src="img/여행이지/1.jpg" alt="">
+                    <div class="text">
+                        <h4>[황금연휴]최다판매 특급 디바리 오션뷰 UP 방콕/파타야 5일</h4>
+                        <p>오션뷰 룸 업그레이드+마사지 2시간 UP+수박쥬스 1인1잔 & 맥주 1인1캔 제공</p>
+                        <strong>579,000원~</strong>
+                    </div><!-- .text end -->
+                </div><!-- .item end -->
+                <div class="item">
+                    <img src="img/여행이지/2.jpg" alt="">
+                    <div class="text">
+                        <h4>[황금연휴][방콕&파타야] 돌핀쇼+야시장+베이욕스카이뷔페 특급 5일</h4>
+                        <p>수족관에서의 훌륭한 돌고래 쇼와 베이욕 스카이 호텔에서 즐기는 뷔페 식사가 포함된 패키지</p>
+                        <strong>559,000원~</strong>
+                    </div><!-- .text end -->
+                </div><!-- .item end -->
+                <div class="item">
+                    <img src="img/여행이지/3.jpg" alt="">
+                    <div class="text">
+                        <h4>[황금연휴]최다판매 특급 디바리 오션뷰 UP 방콕/파타야 5일
+                        </h4>
+                        <p>■ 성인 2명 이상 출발 보장! ■ 럭셔리 요트 투어 + 바나나비치 해변휴양, 스노클링, 줄낚시 체험 ■ 온전한</p>
+                        <strong>1,399,000원~</strong>
+                    </div><!-- .text end -->
+                </div><!-- .item end -->
+                <div class="item">
+                    <img src="img/여행이지/4.jpg" alt="">
+                    <div class="text">
+                        <h4>[황금연휴] #다낭 #5성급 빈펄리버프론트 #바나산 테마파크 #골든브릿지 4/5/6/일</h4>
+                        <p>월드체인 빈펄 5성급 빈펄 리버프론트 숙박+바나산테마파크+호이안구시가지 관광투어</p>
+                        <strong>649,000원~</strong>
+                    </div><!-- .text end -->
+                </div><!-- .item end -->
+            </div><!-- .list end -->
+            <div class="list">
+                <div class="item">
+                    <img src="img/여행이지/5.jpg" alt="">
+                    <div class="text">
+                        <h4>[유럽이보인다] 이탈리아일주 8/9일 [전4성숙박+아울렛/발도르차/아시시/시에나/</h4>
+                        <p>한국인이 가장 많이 찾는 유럽국가 3년 연속 1위(위디피아 2017년 기준), 세계 문화유산을 가장 많이 보유한</p>
+                        <strong>1,799,000원~</strong>
+                    </div><!-- .text end -->
+                </div><!-- .item end -->
+            </div><!-- .list end -->
+            <div class="list">
+                <div class="item">
+                    <img src="img/여행이지/6.jpg" alt="">
+                    <div class="text">
+                        <h4>[더 특별한 허니문] 하와이 쉐라톤와이키키 7일 #룸업그레이드</h4>
+                        <p>오래전부터 인기가 많은 곳으로 하와이를 대표하는 리조트입니다. 근처에 각종 맛집과 로열하와이안 센터가</p>
+                        <strong>3,940,000원~
+                        </strong>
+                    </div><!-- .text end -->
+                </div><!-- .item end -->
+            </div><!-- .list end -->
+            <div class="list">
+                <div class="item">
+                    <img src="img/여행이지/7.jpg" alt="">
+                    <div class="text">
+                        <h4>[클락 GOLF] 퀘스트+미모사/루이시따/베버리/FA코리아 5/6일</h4>
+                        <p>클락 퀘스트호텔 숙박 + 미모사/루이시따/베버리/FA코리아 라운드</p>
+                        <strong>499,000원~</strong>
+                    </div><!-- .text end -->
+                </div><!-- .item end -->
+            </div><!-- .list end -->
+        </div><!-- .inner end -->
+    </section><!-- .cont01 end -->
+    <section class="cont03">
+        <div class="box3">
+            <div class="title">
+                <h3>나는 👨‍👩‍👦<span>부모님과 함께 유럽에서</span><br />🛒쇼핑이 특화된 여행을 즐기고 싶어요</h3>
+                <div class="bt">
+                    <p>다른 취향 보기</p>
+                    <span>내 취향 여행보기</span>
+                </div><!-- .bt end -->
+            </div><!-- .title end -->
+            <div class="list">
+                <div class="item">
+                    <img src="img/피그마_여행페이지/cont/cont3-1.png" alt="">
+                    <div>
+                        <h3>#꽉채우다#융프라우곤돌<br />라+산악열차#버로우마...</h3>
+                        <h4>★영국2days (토트넘 홋스퍼 스타디움,,버로우마<br />켓)스위스(융프라우,아이거익스프레스탑승),...</h4>
+                        <p>자세히 보기</p>
+                    </div>
+                </div><!-- .item end 1-->
+                <div class="item">
+                    <img src="img/피그마_여행페이지/cont/cont3-2.png" alt="">
+                    <div>
+                        <h3>#꽉채우다#융프라우곤돌<br />라+산악열차#버로우마...</h3>
+                        <h4>★영국2days (토트넘 홋스퍼 스타디움,,버로우마<br />켓)스위스(융프라우,아이거익스프레스탑승),...</h4>
+                        <p>자세히 보기</p>
+                    </div>
+                </div><!-- .item end 2-->
+                <div class="item">
+                    <img src="img/피그마_여행페이지/cont/cont3-3.png" alt="">
+                    <div>
+                        <h3>#꽉채우다#융프라우곤돌<br />라+산악열차#버로우마...</h3>
+                        <h4>★영국2days (토트넘 홋스퍼 스타디움,,버로우마<br />켓)스위스(융프라우,아이거익스프레스탑승),...</h4>
+                        <p>자세히 보기</p>
+                    </div>
+                </div><!-- .item end 3-->
+            </div><!-- .list end -->
+        </div><!-- .box3 end -->
+    </section><!-- .cont03 end -->
+    <section class="cont05">
+        <div class="list">
+            <div class="title">
+                <div class="item">
+                    <h2>Magazine</h2>
+                    <p>어디로 떠날지 고민하는 여행자에게
+                        유용한 여정 정보를 소개합니다.</p>
+                    <span><a href="#">더보기</a></span>
+                </div><!-- .item end -->
+            </div><!-- .title end -->
+            <div class="vol_list">
+                <a href="#" onclick="return false">
+                    <div class="item">
+                        <h2>#VOL.4</h2>
+                        <p>'금문고량주’로 알아보는 대만의 술 역사</p>
+                    </div><!-- .item end -->
+                </a>
+                <a href="#" onclick="return false">
+                    <div class="item">
+                        <h2>#VOL.3</h2>
+                        <p>하와이에 있는 동상, '킹카메하메하'는 대체 누구? </p>
+                    </div><!-- .item end -->
+                </a>
+                <a href="#" onclick="return false">
+                    <div class="item">
+                        <h2>#VOL.2</h2>
+                        <p>낮과 밤의 다른 매력, 베트남 호이안</p>
+                    </div><!-- .item end -->
+                </a>
+            </div><!-- .vol_list end -->
+        </div><!-- .list end -->
+        <div class="cont05_bg">
+            <div class="bg1">
+                <span></span>
+            </div><!-- .bg end -->
+            <div class="bg2">
+                <span></span>
+            </div><!-- .bg end -->
+            <div class="bg3">
+                <span></span>
+            </div><!-- .bg end -->
+            <div class="bg4">
+                <span></span>
+            </div><!-- .bg end -->
+        </div><!-- .cont02_bg end -->
+    </section><!-- .cont02 end -->
+    <footer>
+        <div class="inner">
+            <h1>
+                WooriTour
+            </h1>
+            <ul>
+                <li><a href="#" onclick="return false">회사소개</a></li>
+                <li><a href="#" onclick="return false">이용약관</a></li>
+                <li><a href="#" onclick="return false">여행약관</a></li>
+                <li><a href="#" onclick="return false">여행보험약관</a></li>
+                <li><a href="#" onclick="return false">개인정보처리방침</a></li>
+                <li><a href="#" onclick="return false">온라인 제휴안내</a></li>
+            </ul>
+            <div>
+                <p>부산광역시 중구 중앙동 4가 51번지 일광빌딩 3층 <br>
+                    대표자 : 임문수 사업자 등록번호 : 601-81-28270 <br> 통신판매신고 : 2005-부산중구-0251  관광사업등록증 : 제 668호 <br>
+                    영업보증보험 : 5억원가입 : 개인정보 관리 책임자 : 임문수</p>
+            </div>
+            <div class="copy">
+                <p>Copyright © 2008 wooritour.kr., Inc. All rights reserved.</p>
+            </div>
+        </div><!-- .inner end -->
+    </footer>
+</body>
+
+</html>

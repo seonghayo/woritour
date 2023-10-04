@@ -1,0 +1,209 @@
+@charset "utf-8";
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    line-height: 1;
+    color: #333;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.cont04 .inner {
+    width: 1440px;
+    margin: 100px auto;
+}
+
+.cont04 .inner h2 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+}
+.cont04 .inner > ul li {
+    display: inline-block;
+    font-size: 45px;
+    color: #e5e5e5;
+    margin: 0 5px;
+}
+.cont04 .inner > ul li.on {
+    color: #555;
+    font-weight: bold;
+    position: relative;
+}
+.cont04 .inner > ul li:nth-child(1).on::before {
+    background-color: #ff9102;
+}
+.cont04 .inner > ul li:nth-child(2).on::before {
+    background-color: #d9ff00;
+}
+.cont04 .inner > ul li:nth-child(3).on::before {
+    background-color: #ff0022;
+}
+.cont04 .inner > ul li:nth-child(4).on::before {
+    background-color: #333333;
+}
+.cont04 .inner > ul li.on::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: -50%;
+    transform: translateX(-50%);
+}
+.cont04 .inner > ul {
+    text-align: center;
+    margin: 50px 0;
+}
+.cont04 .inner .list {
+    width: 100%;
+    height: 565px;
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}
+.cont04 .inner .list.on {
+    display: flex;
+}
+.cont04 .inner .list .item {
+    width: 331px;
+    height: 100%;
+}
+.cont04 .inner .list .item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.cont04 .inner .list .item .text {
+    margin-top: 20px;
+}
+.cont04 .inner .list .item .text h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.cont04 .inner .list .item .text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+.cont04 .inner .list .item .text strong {
+    font-size: 20px;
+}
+
+/* .cont05 */
+.cont05 {
+    width: 100%;
+    height: 75vh;
+    background: url('../img/여행이지/bg1.jpg') center center / cover no-repeat;
+    color: white;
+    position: relative;
+}
+.cont05 .list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 9;
+    position: relative;
+}
+.cont05 .list .title {
+    width: 25%;
+    height: 100%;
+}
+.cont05 .list .title {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    padding: 40px 40px 60px;
+    border-right: 2px solid #fff;
+    /* height: 100%; */
+    background-color: rgba(0,0,0,0.4);
+}
+.cont05 .list .title h2 {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.cont05 .list .title p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.cont05 .list .title span {
+    font-size: 16px;
+}
+.cont05 .list .vol_list {
+    width: 75%;
+    height: 100%;
+    display: flex;
+}
+.cont05 .list .vol_list a {
+    width: calc(100% / 3);
+}
+.cont05 .list .vol_list a .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px 40px 60px;
+    border-right: 2px solid #fff;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+.cont05 .list .vol_list a .item h2 {
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+.cont05 .list .vol_list a .item:hover h2 {
+    transform: translateY(-50px);
+    transition: 0.7s;
+}
+.cont05 .list .vol_list a .item:hover p {
+    transform: translateY(-50px);
+    transition: 0.7s;
+}
+.cont05 .list .vol_list a .item p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+.cont05 .cont02_bg {
+    width: 100%;
+    height: 75vh;
+}
+.cont05 .cont02_bg>div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.cont05 .vol_list a .item:hover {
+    background-color: transparent;
+}
+.cont05 .cont05_bg .bg1 {
+    background: url('../img/여행이지/bg2.jpg') center center / cover no-repeat;
+}
+.cont05 .cont05_bg .bg2 {
+    background: url('../img/여행이지/bg3.jpg') center center / cover no-repeat;
+}
+.cont05 .cont05_bg .bg3 {
+    background: url('../img/여행이지/bg4.jpg') center center / cover no-repeat;
+}

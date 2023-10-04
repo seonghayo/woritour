@@ -1,0 +1,731 @@
+@charset "utf-8";
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+.notosanskr * {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.autoplay-progress {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    z-index: 10;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+}
+
+.autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: white;
+    fill: none;
+    stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    /*  background-color: antiquewhite; */
+}
+
+/**** 🎨header style ****/
+header {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    background-color: rgba(70, 70, 70, 0.36);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    z-index: 99;
+}
+
+header .inner {
+    width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+}
+
+header .inner h1 {
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+header .inner h1 a img {}
+
+header .inner nav {}
+
+header .inner nav ul {}
+
+header .inner nav ul li {
+    display: inline-block;
+    margin: 0 12.5px;
+}
+
+header .inner>ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+header .inner>ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+/**** 🎨.main_visual style ****/
+
+.main_visual {
+    height: 100vh;
+    position: relative;
+}
+
+.main_visual .swiper-slide {
+    width: 100%;
+    height: 100vh;
+}
+
+.main_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main_visual .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 99;
+}
+
+.main_visual .title h2 {
+    height: 54px;
+    width: 233px;
+    background-color: white;
+    color: #000;
+    line-height: 54px;
+    border-radius: 30px;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+.main_visual .title p {
+    font-size: 90px;
+}
+
+.main_visual .title p .red {
+    color: #FF6060;
+    font-weight: bold;
+}
+
+.main_visual .title p .blue {
+    color: #72abff;
+
+}
+
+.main_visual .title p .yellow {
+    color: #fffa60;
+
+}
+
+/**** 🎨.cont01 style ****/
+.cont01 {
+    background: url(../img/피그마_여행페이지/best_bg.jpg) center center / cover no-repeat;
+    height: 100vh;
+    position: relative;
+}
+
+.cont01 .box {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 233px 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cont01 .box .title {
+    text-align: center;
+    color: white;
+}
+
+
+.cont01 .box .title div h3 {
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.cont01 .box .title div h3 span {
+    font-weight: bold;
+}
+
+.cont01 .box .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont01 .box .list .item {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background-color: white;
+    margin-top: 64px;
+    width: 464px;
+    padding: 90px 0;
+    border-radius: 10px;
+}
+
+.cont01 .box .list .item div {
+
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+}
+
+.cont01 .box .list .item img {
+    margin-left: 25px;
+
+}
+
+.cont01 .box .list .item div span {
+    margin: 20px 0 11px;
+    display: block;
+    font-weight: 600;
+}
+
+.cont01 .box .list .item div h4 {
+    background-color: #FF8F6F;
+    display: inline-block;
+    width: 72px;
+    height: 27px;
+    text-align: center;
+    line-height: 27px;
+    color: white;
+    border-radius: 14px;
+}
+
+.cont01 .box .list .item div p {
+    font-size: 14px;
+}
+
+/**** 🎨.cont02 style ****/
+.cont2 {
+    height: 80vh;
+    background-color: white;
+    position: relative;
+}
+
+.cont2 .box2 {
+    width: 1440px;
+    margin: 0 auto;
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cont2 .box2 .title2 {
+    text-align: center
+}
+
+.cont2 .box2 .title2 h5 {
+    width: 212px;
+    margin: 0 auto;
+    height: 58px;
+    text-align: center;
+    line-height: 58px;
+    border-radius: 40px;
+    border: 1px solid #000;
+    font-size: 28px;
+}
+
+.cont2 .box2 .title2 p {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 30px 0 80px;
+}
+
+.cont2 .box2 .list2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont2 .box2 .list2 .item {
+    width: 250px;
+    height: 400px;
+    color: white;
+    position: relative;
+}
+
+.cont2 .box2 .list2 .item.item1 {
+    background: url(../img/피그마_여행페이지/cont/cont2-1.png);
+}
+
+.cont2 .box2 .list2 .item.item2 {
+    background: url(../img/피그마_여행페이지/cont/cont2-2.png);
+}
+
+.cont2 .box2 .list2 .item.item3 {
+    background: url(../img/피그마_여행페이지/cont/cont2-3.png);
+}
+
+.cont2 .box2 .list2 .item.item4 {
+    background: url(../img/피그마_여행페이지/cont/cont2-4.png);
+}
+
+.cont2 .box2 .list2 .item.item5 {
+    background: url(../img/피그마_여행페이지/cont/cont2-5.png);
+}
+
+.cont2 .box2 .list2 .item div {
+    padding: 20px;
+}
+
+.cont2 .box2 .list2 .item div h6 {
+    font-size: 24px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.cont2 .box2 .list2 .item div h6::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+.cont2 .box2 .list2 .item div p {
+    font-size: 18px;
+}
+
+.cont2 .box2 .list2 .item div span {
+    font-size: 15px;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #000;
+    text-align: center;
+    display: inline-block;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 190px;
+    left: 25px;
+    cursor: pointer;
+}
+
+/**** 🎨.cont03 style ****/
+.cont03 {
+    height: 100vh;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.cont03 .box3 {
+    width: 1440px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cont03 .box3 .title {}
+
+.cont03 .box3 .title h3 {
+    font-size: 45px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.cont03 .box3 .title h3 span {
+    font-weight: bold;
+}
+
+.cont03 .box3 .title .bt {
+    display: flex;
+    justify-content: center;
+}
+
+.cont03 .box3 .title .bt p {
+    background-color: white;
+    width: 170px;
+    height: 52px;
+    line-height: 50px;
+    border-radius: 40px;
+    border: 1px solid #B6B6B6;
+    margin: 36px 17.5px 83px;
+    position: relative;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.cont03 .box3 .title .bt p::after {
+    content: url(../img/피그마_여행페이지/cont/recycle.png);
+    margin-left: 5px;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.cont03 .box3 .title .bt span::after {
+    content: url(../img/피그마_여행페이지/cont/check.png);
+    margin-left: 5px;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+
+.cont03 .box3 .title .bt span {
+    background-color: rgb(0, 0, 0);
+    width: 170px;
+    height: 52px;
+    line-height: 50px;
+    border-radius: 40px;
+    border: 1px solid #000000;
+    margin: 36px 17.5px 83px;
+    color: white;
+    box-sizing: border-box;
+    padding-left: 20px;
+    position: relative;
+}
+
+.cont03 .box3 .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont03 .box3 .list .item {
+    width: 450px;
+    height: 615px;
+    border: 1px solid #D4D4D4;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+}
+
+.cont03 .box3 .list .item img {
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+}
+
+.cont03 .box3 .list .item div {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.cont03 .box3 .list .item div h3 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.cont03 .box3 .list .item div h4 {
+    font-size: 15px;
+    color: #666666;
+    font-weight: 400;
+    margin-top: 37px;
+}
+
+.cont03 .box3 .list .item div p {
+    font-size: 16px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 35px;
+    left: 75px;
+}
+
+.cont04 .inner {
+   /*  padding: 90px 0 0 ; */
+    width: 1440px;
+    margin: 120px auto;
+    height: 80vh;
+}
+
+.cont04 .inner h2 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.cont04 .inner>ul li {
+    display: inline-block;
+    font-size: 40px;
+    color: #e5e5e5;
+    margin: 0 5px;
+}
+
+.cont04 .inner>ul li.on {
+    color: #555;
+    font-weight: bold;
+    position: relative;
+}
+
+.cont04 .inner>ul li:nth-child(1).on::before {
+    background-color: #ff9102;
+}
+
+.cont04 .inner>ul li:nth-child(2).on::before {
+    background-color: #d9ff00;
+}
+
+.cont04 .inner>ul li:nth-child(3).on::before {
+    background-color: #ff0022;
+}
+
+.cont04 .inner>ul li:nth-child(4).on::before {
+    background-color: #333333;
+}
+
+.cont04 .inner>ul li.on::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: -20%;
+    transform: translateX(-50%);
+}
+
+.cont04 .inner>ul {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.cont04 .inner .list {
+    width: 100%;
+    height: 565px;
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}
+
+.cont04 .inner .list.on {
+    display: flex;
+}
+
+.cont04 .inner .list .item {
+    width: 331px;
+    height: 100%;
+}
+
+.cont04 .inner .list .item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cont04 .inner .list .item .text {
+    margin-top: 20px;
+}
+
+.cont04 .inner .list .item .text h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.cont04 .inner .list .item .text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden
+}
+
+.cont04 .inner .list .item .text strong {
+    font-size: 20px;
+}
+
+/* .cont05 */
+.cont05 {
+    width: 100%;
+    height: 75vh;
+    background: url('../img/여행이지/bg1.jpg') center center / cover no-repeat;
+    color: white;
+    position: relative;
+}
+
+.cont05 .list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 9;
+    position: relative;
+}
+
+.cont05 .list .title {
+    width: 25%;
+    height: 100%;
+}
+
+.cont05 .list .title {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    padding: 40px 40px 60px;
+    border-right: 2px solid #fff;
+    /* height: 100%; */
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.cont05 .list .title h2 {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.cont05 .list .title p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cont05 .list .title span {
+    font-size: 16px;
+}
+
+.cont05 .list .vol_list {
+    width: 75%;
+    height: 100%;
+    display: flex;
+}
+
+.cont05 .list .vol_list a {
+    width: calc(100% / 3);
+}
+
+.cont05 .list .vol_list a .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px 40px 60px;
+    border-right: 2px solid #fff;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.cont05 .list .vol_list a .item h2 {
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.cont05 .list .vol_list a .item:hover h2 {
+    transform: translateY(-50px);
+    transition: 0.7s;
+}
+
+.cont05 .list .vol_list a .item:hover p {
+    transform: translateY(-50px);
+    transition: 0.7s;
+}
+
+.cont05 .list .vol_list a .item p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.cont05 .cont05_bg {
+    width: 100%;
+    height: auto;
+}
+
+.cont05 .cont05_bg>div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.cont05 .vol_list a .item:hover {
+    background-color: transparent;
+}
+
+.cont05 .cont05_bg .bg1 {
+    background: url('../img/여행이지/bg2.jpg') center center / cover no-repeat;
+}
+
+.cont05 .cont05_bg .bg2 {
+    background: url('../img/여행이지/bg3.jpg') center center / cover no-repeat;
+}
+
+.cont05 .cont05_bg .bg3 {
+    background: url('../img/여행이지/bg4.jpg') center center / cover no-repeat;
+}
+footer {
+    background-color: #fff;
+    
+}
+footer .inner {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 50px 0;
+    color: #333333;
+}
+footer h1 {
+    font-size: 40px;
+}
+footer .inner ul {
+    display: flex;
+    justify-content: flex-start;
+    margin: 30px 0;
+}
+footer .inner ul li {
+    margin-right: 20px;
+}
+footer .copy {
+    margin-top: 20px;
+}
